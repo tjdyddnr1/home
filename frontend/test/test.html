@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+*{list-style: none; text-decoration: none; font-family: sans-serif; font-weight: bold; font-size: 0.9rem;}
+
+#index_wrap ul {display: block;}
+#index_wrap ul li {position: relative;}
+
+#leftToRight li::after {position: absolute; content:""; display: block; border-bottom: 3px solid #000; transition: width 250ms ease-out; left: auto; right: 0;  width: 0;}
+#leftToRight li:hover::after {width: 100%; left: 0; right: auto;}
+  </style>
+
+</head>
+/
+
+<body>
+<div id="index_wrap">
+  <ul id ="leftToRight">
+    <p>왼쪽에서 오른쪽으로</p>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">DESIGN CASE</a></li>
+    <li><a href="#">STORY</a></li>
+    <li><a href="#">CONTACT</a><li>
+  </ul>
+</div>
+</body>
+
+</html>
+출처: https://sudal89.tistory.com/56 [가을밤에 내리는 비:티스토리]

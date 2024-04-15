@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: skyblue;
+            overflow: scroll;
+        }
+        .head {
+            background-color: red;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
+        }
+        .logo_box {
+            background-color: bisque;
+            width: 17%;
+
+        }
+        .logo {
+            padding: 13px 15px;
+            display: flex;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            width: 70%;
+        }
+        ol {
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            display: block;
+        }
+        li {
+            list-style-type: none;
+            padding: 9px 5px 0 0;
+            margin: 13px 42px 0 0;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        li:hover {
+            color: plum;
+        }
+
+        li::after {
+            position: absolute; 
+            content:""; 
+            display: block;
+             border-bottom: 1px solid plum;
+              transition: 250ms ease-in-out;
+               left: auto;
+                right: 0;  
+                width: 0;
+            }
+
+        li:hover::after {
+            position: relative;
+            width: 100%;
+            left: 0;
+        }
+        .stellive {
+            width: 157px;
+            height: auto;
+        }
+        .body {
+            width: 100%;
+            height: 500px;
+            background-color: darkblue;
+        }
+        .benner {
+            width: 100%;
+            height: 680px;
+            background-image:url(/test/images/아라하시타비신의상공개.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="logo_box">
+            <div class="logo">
+                <img class="stellive" src="/test/images/스텔라이브로고.png">
+            </div>
+        </div>
+        <div class="menu">
+        <div>
+        </nav>
+            <ol>
+                <ul>
+                <li>ABOUT</li>
+             </ul>
+                <li>NEWS</li>
+                <li>TALENTS</li>
+                <li>MUSIC</li>
+                <li>GOODS</li>
+                <li>GUIDELINE</li>
+                <li>CONTACT</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <div class="body">
+        <p class="benner"></p>
+    </div>
+</body>
+</html>
