@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: skyblue;
+            overflow: scroll;
+        }
+        .head {
+            background-color: red;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
+        }
+        .logo_box {
+            background-color: bisque;
+            width: 17%;
+
+        }
+        .logo {
+            padding: 13px 15px;
+            display: flex;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            width: 70%;
+        }
+        ol {
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            display: block;
+        }
+        li {
+            list-style-type: none;
+            padding: 9px 5px 0 0;
+            margin: 13px 42px 0 0;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        li:hover {
+            color: plum;
+        }
+
+        li::after {
+            position: absolute; 
+            content:""; 
+            display: block;
+             border-bottom: 1px solid plum;
+              transition: 250ms ease-in-out;
+               left: auto;
+                right: 0;  
+                width: 0;
+            }
+
+        li:hover::after {
+            position: relative;
+            width: 100%;
+            left: 0;
+        }
+        .stellive {
+            width: 157px;
+            height: auto;
+        }
+        .body {
+            width: 100%;
+            height: 500px;
+            background-color: blue;
+        }
+        .slider {
+            width: 100%; /* 원하는 슬라이드의 최대 너비 설정 */
+            overflow: hidden; /* 슬라이드 밖의 내용 숨기기 */
+            position: relative; /* 상대적 위치 */
+        }
+        .slides {
+            display: flex; /* 슬라이드를 가로로 나열 */
+            animation: slide-animation 20s infinite; /* 애니메이션 적용, 무한 반복 */
+        }
+        .slide {
+            flex: 0 0 100%; /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */
+            transition: transform 1s ease; /* 부드러운 변환 효과 */
+            display: flex; /* flexbox 사용 */
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
+            height: 500px; /* 슬라이드의 높이 */
+            background-color: #ccc; /* 배경 색상 */
+            color: white; /* 글자 색상 */
+        }
+
+        /* 애니메이션 효과 */
+        @keyframes slide-animation {
+            0%, 20% { transform: translateX(0); } /* 0초부터 4초까지 첫 번째 이미지 */
+            25%, 45% { transform: translateX(-100%); } /* 5초부터 9초까지 두 번째 이미지 */
+            50%, 70% { transform: translateX(-200%); } /* 10초부터 14초까지 세 번째 이미지 */
+            75%, 95% { transform: translateX(-300%); } /* 15초부터 19초까지 네 번째 이미지 */
+            100% { transform: translateX(0); } /* 20초에 다시 첫 번째 이미지로 리셋 */
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="logo_box">
+            <div class="logo">
+                <img class="stellive" src="/test/images/스텔라이브로고.png">
+            </div>
+        </div>
+        <div class="menu">
+        <div>
+        </nav>
+            <ol>
+                <ul>
+                <li>ABOUT</li>
+             </ul>
+                <li>NEWS</li>
+                <li>TALENTS</li>
+                <li>MUSIC</li>
+                <li>GOODS</li>
+                <li>GUIDELINE</li>
+                <li>CONTACT</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="slider">
+            <div class="slides">
+            <div class="slide"><img src="/test/images/마시로신의상공개.jpg"></div>
+            <div class="slide"><img src="/test/images/아라하시타비신의상공개.jpg"></div>
+            <div class="slide"><img src="/test/images/아카네리제신의상공개.jpg"></div>
+            <div class="slide"><img src="/test/images/히나신의상공개.jpg"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

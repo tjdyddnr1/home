@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>CSS-only 이미지 슬라이더</title>
+<style>
+  /* 슬라이더 박스 스타일링 */
+  .slider {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  /* 모든 슬라이드를 가로로 나열 */
+  .slides {
+    width: 300%; /* 슬라이드가 3개이므로 300% */
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  /* 각 슬라이드의 크기 지정 */
+  .slide {
+    width: 33.333%; /* 전체 슬라이드 중 한 개의 폭 */
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    display: block; /* 이미지 간격 제거 */
+  }
+
+  /* 앵커에 따른 슬라이드 이동 */
+  #slide1:target ~ .slides {
+    transform: translateX(0%);
+  }
+
+  #slide2:target ~ .slides {
+    transform: translateX(-33.333%);
+  }
+
+  #slide3:target ~ .slides {
+    transform: translateX(-66.666%);
+  }
+
+  /* 네비게이션 버튼 스타일 */
+  .nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .nav a {
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div class="slider">
+  <span id="slide1"></span>
+  <span id="slide2"></span>
+  <span id="slide3"></span>
+  <div class="slides">
+    <div class="slide"><img src="/test/images/마시로신의상공개.jpg" alt="첫 번째 이미지"></div>
+    <div class="slide"><img src="/test/images/아라하시타비신의상공개.jpg" alt="두 번째 이미지"></div>
+    <div class="slide"><img src="/test/images/아카네리제신의상공개.jpg" alt="세 번째 이미지"></div>
+  </div>
+  <div class="nav">
+    <a href="#slide1">1</a>
+    <a href="#slide2">2</a>
+    <a href="#slide3">3</a>
+  </div>
+</div>
+</body>
+</html>
