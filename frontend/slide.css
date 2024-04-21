@@ -1,0 +1,34 @@
+.slider {
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    animation: slide-animation 24s infinite;
+}
+
+.slide {
+    width: 25%;
+    transition: transform 4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    color: white;
+    font-size: 24px;
+}
+@keyframes slide-animation {
+    0%, 20%   { transform: translateX(0%); }
+    21%       { transform: translateX(-100%); }
+    21.25%, 40% { transform: translateX(-100%); }
+    41%       { transform: translateX(-200%); }
+    41.25%, 60% { transform: translateX(-200%); }
+    61%       { transform: translateX(-300%); }
+    61.25%, 80% { transform: translateX(-300%); }
+    81%       { transform: translateX(0%); }
+    }
+@keyframes slide-animation
